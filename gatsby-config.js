@@ -193,6 +193,14 @@ module.exports = {
                     families: ["Raleway", "Lora"]
                 }
             }
+        },
+        {
+            resolve: "gatsby-plugin-react-svg",
+            options: {
+                rule: {
+                    include: /\.inline\.svg$/
+                }
+            }
         }
     ]
 };
