@@ -11,7 +11,8 @@ module.exports = {
     extends: [
         "plugin:ghost/node",
         "plugin:ghost/ember",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
     ],
     settings: {
         react: {
