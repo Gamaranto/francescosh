@@ -1,5 +1,6 @@
 import React from "react";
-import Hero from "../../public/images/icons/zombie.inline.svg";
+import Zombie from "../../public/images/icons/zombie.inline.svg";
+import Hero from "../../public/images/icons/hero.inline.svg";
 
 export default function Landing() {
     return (
@@ -21,7 +22,7 @@ export default function Landing() {
                 </p>
             </div>
             <div className="box hero">
-                <Hero></Hero>
+                <Hero />
             </div>
             <div className="box footer">Limited copiryght</div>
         </main>
