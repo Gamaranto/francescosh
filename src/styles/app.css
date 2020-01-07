@@ -47,10 +47,6 @@ what's here to work the way you'd like it to.
 /* Reset
 /* ---------------------------------------------------------- */
 
-* {
-    box-sizing: border-box;
-}
-
 html,
 body,
 div,

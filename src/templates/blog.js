@@ -6,14 +6,14 @@ import { Layout, PostCard, Pagination } from "../components/common";
 import { MetaData } from "../components/common/meta";
 
 /**
- * Main index page (home page)
+ * Main Blog page (home page)
  *
  * Loads all posts from Ghost and uses pagination to navigate through them.
  * The number of posts that should appear per page can be setup
  * in /utils/siteConfig.js under `postsPerPage`.
  *
  */
-const Index = ({ data, location, pageContext }) => {
+const Blog = ({ data, location, pageContext }) => {
     const posts = data.allGhostPost.edges;
 
     return (
@@ -34,7 +34,7 @@ const Index = ({ data, location, pageContext }) => {
     );
 };
 
-Index.propTypes = {
+Blog.propTypes = {
     data: PropTypes.shape({
         allGhostPost: PropTypes.object.isRequired
     }).isRequired,
@@ -44,7 +44,7 @@ Index.propTypes = {
     pageContext: PropTypes.object
 };
 
-export default Index;
+export default Blog;
 
 // This page query loads all posts sorted descending by published date
 // The `limit` and `skip` values are used for pagination
