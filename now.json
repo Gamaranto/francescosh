@@ -1,6 +1,8 @@
 {
-  "env": {
-    "GHOST_API_URL": "https://francescosh.herokuapp.com",
-    "GHOST_CONTENT_API_KEY": "3e50137c18220fd79d41f17233"
+  "build": {
+    "env": {
+      "GHOST_API_URL": "@ghostapiurl",
+      "GHOST_CONTENT_API_KEY": "@content-api-key"
+    }
   }
 }

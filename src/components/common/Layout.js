@@ -8,6 +8,7 @@ import { Navigation } from ".";
 import config from "../../utils/siteConfig";
 
 // Styles
+import "normalize.css";
 import "../../styles/app.css";
 
 /**
