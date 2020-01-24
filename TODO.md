@@ -22,5 +22,4 @@
 
 ## All pages:
 
-    ###TODO: Add Google analytics
-    ###TODO: Add an home button
+###TODO: Add an home button

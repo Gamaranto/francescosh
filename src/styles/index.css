@@ -110,6 +110,11 @@ nav {
     padding-left: max(1em, 20px);
 }
 
+.intro > h1 {
+    letter-spacing: 0.12em;
+    margin: 10px auto 0 auto;
+}
+
 .intro > p {
     font-size: min(max(2rem, 1vw), 1.5rem);
     line-height: 1.2;
