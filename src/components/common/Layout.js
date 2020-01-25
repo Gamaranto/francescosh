@@ -26,7 +26,7 @@ const DefaultLayout = ({
     bodyClass,
     isHome,
     path,
-    layoutStyle = ""
+    layoutClass = ""
 }) => {
     const site = data.allGhostSettings.edges[0].node;
     const twitterUrl = site.twitter
@@ -44,7 +44,7 @@ const DefaultLayout = ({
                 <body className={bodyClass} />
             </Helmet>
 
-            <div className={`viewport ${layoutStyle}`}>
+            <div className={`viewport ${layoutClass}`}>
                 {/* The main header section on top of the screen */}
                 <Header path={path} />
                 <main className="site-main">
