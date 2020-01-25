@@ -2,7 +2,6 @@
 
 ## Footer
 
-    ### DONE: Style the text elements.
     ### DONE: Make the links to Twitter and bla bla bla.
 
 ## Body

@@ -1,7 +1,6 @@
 import React from "react";
 
-import { Layout } from "../components/common";
-import ProjectBox from "../components/common/ProjectBox";
+import { Layout, ProjectBox } from "../components/common";
 
 export default function About(props) {
     return (

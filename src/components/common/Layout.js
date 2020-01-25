@@ -20,7 +20,14 @@ import "../../styles/global.css";
  * styles, and meta data for each page.
  *
  */
-const DefaultLayout = ({ data, children, bodyClass, isHome, path }) => {
+const DefaultLayout = ({
+    data,
+    children,
+    bodyClass,
+    isHome,
+    path,
+    layoutStyle = ""
+}) => {
     const site = data.allGhostSettings.edges[0].node;
     const twitterUrl = site.twitter
         ? `https://twitter.com/${site.twitter.replace(/^@/, "")}`
@@ -37,20 +44,15 @@ const DefaultLayout = ({ data, children, bodyClass, isHome, path }) => {
                 <body className={bodyClass} />
             </Helmet>
 
-            <div className="viewport">
-                <div className="viewport-top">
-                    {/* The main header section on top of the screen */}
-                    <Header path={path} />
-                    <main className="site-main">
-                        {/* All the main content gets inserted here, index.js, post.js */}
-                        {children}
-                    </main>
-                </div>
-
-                <div className="viewport-bottom">
-                    {/* The footer at the very bottom of the screen */}
-                    <Footer />
-                </div>
+            <div className={`viewport ${layoutStyle}`}>
+                {/* The main header section on top of the screen */}
+                <Header path={path} />
+                <main className="site-main">
+                    {/* All the main content gets inserted here, index.js, post.js */}
+                    {children}
+                </main>
+                {/* The footer at the very bottom of the screen */}
+                <Footer />
             </div>
         </>
     );

@@ -6,7 +6,6 @@ import Route from "./Route";
 export default function Header(props) {
     return (
         <header className="header">
-            <Route path={props.path} />
             <nav>
                 <ul className="nav-menu">
                     <li>
@@ -25,6 +24,7 @@ export default function Header(props) {
                     </li>
                 </ul>
             </nav>
+            <Route path={props.path} />
         </header>
     );
 }

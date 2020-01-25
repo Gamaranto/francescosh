@@ -1,7 +1,5 @@
 import React from "react";
 
-import Header from "../components/common/Header";
-import Footer from "../components/common/Footer";
 import Zombie from "../../public/images/icons/Zombie.inline.svg";
 
 import "../styles/index.css";
@@ -10,7 +8,7 @@ import { Layout } from "../components/common";
 export default function Landing(props) {
     return (
         <Layout path={props.path}>
-            <main className="grid">
+            <section className="grid">
                 <div className=" content">
                     <div className="intro ">
                         <h1>Ciao, I am Francesco.</h1>
@@ -23,7 +21,7 @@ export default function Landing(props) {
                 <div className=" hero">
                     <Zombie />
                 </div>
-            </main>
+            </section>
         </Layout>
     );
 }

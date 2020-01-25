@@ -1,3 +1,12 @@
+/* Layout styling */
+
+.grid {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-areas: "content  hero hero";
+}
+
 .content {
     grid-area: content;
 }
@@ -6,19 +15,7 @@
     grid-area: hero;
 }
 
-.grid {
-    width: calc(100vw - 80px);
-    margin: 0 auto;
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-areas:
-        "....... header header"
-        "content  hero hero"
-        ".......  footer  footer";
-}
-
-/* Main text stuff */
+/* Main text styles */
 
 .intro {
     margin: 0 auto;
@@ -33,29 +30,4 @@
 .intro > p {
     font-size: min(max(2rem, 1vw), 1.5rem);
     line-height: 1.2;
-}
-
-/* Hero and SVG */
-
-/* Footer */
-
-footer {
-    display: flex;
-
-    margin: 100px auto 0 auto;
-    width: 80%;
-    font-size: 13.5px;
-    justify-content: space-between;
-    border-top: 1px grey solid;
-    grid-area: footer;
-}
-
-footer nav {
-    margin: 0;
-    padding: 0;
-}
-footer ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0;
 }
