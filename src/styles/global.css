@@ -1,0 +1,123 @@
+:root {
+    --main-color: hsl(340.5, 59.7%, 50.4%);
+    --accent-color: hsl(270, 50%, 40%);
+    --background-color: hsl(216, 45.5%, 95.7%);
+    --text-color: hsl(216, 38.5%, 5.1%);
+    --font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+    --font-family-serif: "Lora", serif;
+    --font-family-monospace: "Menlo", monospace;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-family-serif);
+    font-weight: bold;
+    margin: 0;
+}
+
+h1 {
+    font-size: min(max(2.5rem, 7vw), 12.5rem);
+    line-height: 1.4;
+    margin: 15px auto;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+    font-size: unset;
+}
+
+section {
+    width: calc(100% - 20px);
+    margin: 100px auto 0 auto;
+}
+
+/* Header styles */
+
+.route {
+    margin: 0 auto;
+}
+
+.route-link {
+    padding: 8px;
+}
+
+.route-link::after {
+    content: "•";
+    margin: auto 0;
+}
+
+nav {
+    margin: 15px 7px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: flex-end;
+    padding: 0;
+}
+
+.nav-menu > li {
+    font-size: max(1rem, 13.5px);
+    margin: 0 15px;
+    list-style-type: none;
+    font-weight: lighter;
+    opacity: 0.9;
+}
+
+.nav-menu > li:hover {
+    cursor: pointer;
+    background-image: linear-gradient(
+        var(--background-color) 60%,
+        var(--main-color) 55%
+    );
+    font-weight: bold;
+}
+
+/* Footer styles */
+
+footer {
+    display: flex;
+
+    margin: 100px auto 0 auto;
+    width: 80%;
+    font-size: 13.5px;
+    justify-content: space-between;
+    border-top: 1px grey solid;
+    grid-area: footer;
+}
+
+footer nav {
+    margin: 0;
+    padding: 0;
+}
+footer ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+}
+
+/* Grid definitions. In a near future, I would like to be able to pass a diff grid config depending on the page I'm on. */
+
+.header {
+    grid-area: header;
+}
+
+.footer {
+    grid-area: footer;
+}

@@ -10,7 +10,7 @@ import config from "../../utils/siteConfig";
 
 // Styles
 import "normalize.css";
-import "../../styles/app.css";
+import "../../styles/global.css";
 
 /**
  * Main layout component
