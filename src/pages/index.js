@@ -7,21 +7,19 @@ import { Layout } from "../components/common";
 
 export default function Landing(props) {
     return (
-        <Layout path={props.path}>
-            <section className="grid">
-                <div className=" content">
-                    <div className="intro ">
-                        <h1>Ciao, I am Francesco.</h1>
-                        <p>
-                            Nice to meet you. <br /> This is your personal
-                            window on my thoughts, projects and life.
-                        </p>
-                    </div>
+        <Layout path={props.path} layoutClass="index-content">
+            <div className="content">
+                <div className="intro ">
+                    <h1>Ciao, I am Francesco.</h1>
+                    <p>
+                        Nice to meet you. <br /> This is your personal window on
+                        my thoughts, projects and life.
+                    </p>
                 </div>
-                <div className=" hero">
-                    <Zombie />
-                </div>
-            </section>
+            </div>
+            <div className=" hero">
+                <Zombie />
+            </div>
         </Layout>
     );
 }

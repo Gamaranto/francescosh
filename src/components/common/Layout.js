@@ -44,10 +44,10 @@ const DefaultLayout = ({
                 <body className={bodyClass} />
             </Helmet>
 
-            <div className={`viewport ${layoutClass}`}>
+            <div className="viewport grid">
                 {/* The main header section on top of the screen */}
                 <Header path={path} />
-                <main className="site-main">
+                <main className={`site-main ${layoutClass}`}>
                     {/* All the main content gets inserted here, index.js, post.js */}
                     {children}
                 </main>

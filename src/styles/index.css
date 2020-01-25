@@ -1,18 +1,11 @@
 /* Layout styling */
 
-.grid {
-    display: grid;
-    grid-gap: 10px;
-    grid-template-columns: 2fr 1fr 1fr;
-    grid-template-areas: "content  hero hero";
-}
-
 .content {
-    grid-area: content;
+    flex-basis: 33%;
 }
 
 .hero {
-    grid-area: hero;
+    flex-basis: 66%;
 }
 
 /* Main text styles */
@@ -30,4 +23,9 @@
 .intro > p {
     font-size: min(max(2rem, 1vw), 1.5rem);
     line-height: 1.2;
+}
+
+.index-content {
+    display: flex;
+    justify-content: space-between;
 }
