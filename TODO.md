@@ -2,18 +2,18 @@
 
 ## Footer
 
-    ### TODO: Style the text elements.
-    ### TODO: Make the links to Twitter and bla bla bla.
+    ### DONE: Style the text elements.
+    ### DONE: Make the links to Twitter and bla bla bla.
 
 ## Body
 
-    ### TODO: fix SVG? Or add projects? I would say add the projects.
-    ### TODO: Animate the background?
+    ### DONE: fix SVG
+    ### TODO: Animate the SVG
 
 ## Projects Page:
 
     ### TODO: Fetch the projects from github
-    ### TODO: Make the SVG between them
+    ### TODO: Connect them with an SVG.
 
 ## Blog Page:
 
@@ -22,4 +22,4 @@
 
 ## All pages:
 
-###TODO: Add an home button
+###TODO: Add an home Component

@@ -2,13 +2,14 @@ import React from "react";
 
 import Header from "../components/common/Header";
 import Footer from "../components/common/Footer";
+import Zombie from "../../public/images/icons/Zombie.inline.svg";
 
 import "../styles/index.css";
 
-export default function Landing() {
+export default function Landing(props) {
     return (
         <main className="grid">
-            <Header />
+            <Header {...props} />
             <div className=" content">
                 <div className="intro ">
                     <h1>Ciao, I am Francesco.</h1>
@@ -18,7 +19,9 @@ export default function Landing() {
                     </p>
                 </div>
             </div>
-            <div className=" hero"></div>
+            <div className=" hero">
+                <Zombie />
+            </div>
             <Footer />
         </main>
     );

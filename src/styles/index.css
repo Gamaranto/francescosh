@@ -1,5 +1,6 @@
 :root {
-    --main-color: #5182c1;
+    --main-color: #cc3366;
+    --accent: #663399;
     --background-color: #eff3f9;
     --text-black: #080c12;
     --font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI",
@@ -74,6 +75,19 @@ section {
 
 /* Header stuff */
 
+.route {
+    margin: 0 auto;
+}
+
+.route-link {
+    padding: 8px;
+}
+
+.route-link::after {
+    content: "•";
+    margin: auto 0;
+}
+
 nav {
     margin: 15px 7px 0 0;
     display: flex;
@@ -119,6 +133,8 @@ nav {
     font-size: min(max(2rem, 1vw), 1.5rem);
     line-height: 1.2;
 }
+
+/* Hero and SVG */
 
 /* Footer */
 

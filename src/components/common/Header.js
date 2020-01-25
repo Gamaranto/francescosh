@@ -1,9 +1,12 @@
 import React from "react";
 import { Link } from "gatsby";
 
-export default function Header() {
+import Route from "./Route";
+
+export default function Header(props) {
     return (
         <header className="header">
+            <Route path={props.path} />
             <nav>
                 <ul className="nav-menu">
                     <li>
