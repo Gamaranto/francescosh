@@ -4,6 +4,7 @@ import { graphql } from "gatsby";
 
 import { Layout, PostCard, Pagination } from "../components/common";
 import { MetaData } from "../components/common/meta";
+import "../styles/blog.css";
 
 /**
  * Main Blog page (home page)
@@ -13,13 +14,13 @@ import { MetaData } from "../components/common/meta";
  * in /utils/siteConfig.js under `postsPerPage`.
  *
  */
-const Blog = ({ data, location, pageContext }) => {
+const Blog = ({ data, location, pageContext, path }) => {
     const posts = data.allGhostPost.edges;
 
     return (
         <>
             <MetaData location={location} />
-            <Layout isHome={true}>
+            <Layout isHome={true} path={path}>
                 <div className="container">
                     <section className="post-feed">
                         {posts.map(({ node }) => (

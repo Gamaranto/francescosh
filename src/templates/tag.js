@@ -11,14 +11,14 @@ import { MetaData } from "../components/common/meta";
  * Loads all posts for the requested tag incl. pagination.
  *
  */
-const Tag = ({ data, location, pageContext }) => {
+const Tag = ({ data, location, pageContext, path }) => {
     const tag = data.ghostTag;
     const posts = data.allGhostPost.edges;
 
     return (
         <>
             <MetaData data={data} location={location} type="series" />
-            <Layout>
+            <Layout path={path}>
                 <div className="container">
                     <header className="tag-header">
                         <h1>{tag.name}</h1>

@@ -1,0 +1,91 @@
+/* Layout */
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+    padding: 0 4vw;
+}
+
+.post-feed {
+    display: grid;
+    justify-content: space-between;
+    grid-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media (max-width: 980px) {
+    .post-feed {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 680px) {
+    .post-feed {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Post Cards */
+
+.post-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px 0 0 0;
+    width: 100%;
+    color: var(secondary-text-color);
+}
+
+.post-card-footer-left {
+    display: flex;
+    align-items: center;
+}
+
+.post-card-footer-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.post-card-image {
+    margin: 0 0 10px;
+    height: 200px;
+    background-color: var(--secondary-color);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+}
+
+.post-card-tags {
+    margin: 0 0 5px;
+    color: var(secondary-text-color);
+}
+
+.post-card-title {
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.post-card-avatar {
+    width: 30px;
+    height: 30px;
+    margin: 0 7px 0 0;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.post-card-avatar .author-profile-image {
+    display: block;
+    width: 100%;
+    background: var(secondary-text-color);
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+.post-card-avatar .default-avatar {
+    width: 26px;
+}
+
+.post-card-excerpt {
+    margin: 0;
+    line-height: 1.55;
+}
