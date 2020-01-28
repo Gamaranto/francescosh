@@ -12,6 +12,10 @@
     --font-family-monospace: "Menlo", monospace;
 }
 
+html {
+    font-size: 62.5%;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -20,6 +24,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
+    font-size: 1.6rem;
 }
 
 h1,
@@ -33,7 +38,11 @@ h3 {
 h1 {
     font-size: min(max(2.5rem, 7vw), 12.5rem);
     line-height: 1.4;
-    margin: 15px auto;
+    margin: 1.5rem auto;
+}
+
+h2 {
+    font-size: 2.4rem;
 }
 
 a {
@@ -43,13 +52,13 @@ a {
 }
 
 main {
-    width: calc(100vw - 80px);
+    width: calc(100vw - 8rem);
     margin: 0 auto;
     padding: 4vw 0;
 }
 section {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 10rem;
 }
 
 /* Header styles */
@@ -66,12 +75,12 @@ section {
 }
 
 .route-link {
-    padding: 8px 0;
+    padding: 0.8rem 0;
 }
 
 .route-link::after {
     content: "•";
-    margin: auto 8px;
+    margin: auto 0.8rem;
     font-size: 1.2em;
     background: linear-gradient(var(--main-color), var(--secondary-color));
     background-clip: text;
@@ -87,7 +96,7 @@ section {
 }
 
 nav {
-    margin: 15px 7px 0 0;
+    margin: 1.5rem 0.7rem 0 0;
     display: flex;
     justify-content: flex-end;
 }
@@ -99,8 +108,8 @@ nav {
 }
 
 .nav-menu > li {
-    font-size: max(1rem, 13.5px);
-    margin: 0 15px;
+    font-size: 1.35rem;
+    margin: 0 1.5rem;
     list-style-type: none;
     font-weight: lighter;
     opacity: 0.9;
@@ -120,11 +129,11 @@ nav {
 footer {
     display: flex;
 
-    margin: 100px auto 0 auto;
+    margin: 100rem auto 0 auto;
     width: 80%;
-    font-size: 13.5px;
+    font-size: 1.35rem;
     justify-content: space-between;
-    border-top: 1px grey solid;
+    border-top: 1px var(--secondary-text-color) solid;
     grid-area: footer;
 }
 
@@ -154,7 +163,7 @@ main {
 
 .grid {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 1rem;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-areas:
         "....     header   header"
