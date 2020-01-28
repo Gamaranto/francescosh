@@ -25,7 +25,8 @@ const DefaultLayout = ({
     children,
     bodyClass,
     isHome,
-    path,
+    location,
+    slug,
     layoutClass = ""
 }) => {
     const site = data.allGhostSettings.edges[0].node;
@@ -35,6 +36,8 @@ const DefaultLayout = ({
     const facebookUrl = site.facebook
         ? `https://www.facebook.com/${site.facebook.replace(/^\//, "")}`
         : null;
+
+    console.log(slug);
 
     return (
         <>
@@ -46,7 +49,7 @@ const DefaultLayout = ({
 
             <div className="viewport grid">
                 {/* The main header section on top of the screen */}
-                <Header path={path} />
+                <Header location={location} slug={slug} />
                 <main className={`site-main ${layoutClass}`}>
                     {/* All the main content gets inserted here, index.js, post.js */}
                     {children}

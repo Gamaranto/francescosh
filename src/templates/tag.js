@@ -18,7 +18,7 @@ const Tag = ({ data, location, pageContext }) => {
     return (
         <>
             <MetaData data={data} location={location} type="series" />
-            <Layout>
+            <Layout location={location}>
                 <div className="container">
                     <header className="tag-header">
                         <h1>{tag.name}</h1>

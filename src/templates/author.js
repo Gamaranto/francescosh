@@ -24,7 +24,7 @@ const Author = ({ data, location, pageContext }) => {
     return (
         <>
             <MetaData data={data} location={location} type="profile" />
-            <Layout>
+            <Layout location={location}>
                 <div className="container">
                     <header className="author-header">
                         <div className="author-header-content">

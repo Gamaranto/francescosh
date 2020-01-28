@@ -19,7 +19,7 @@ const Blog = ({ data, location, pageContext }) => {
     return (
         <>
             <MetaData location={location} />
-            <Layout isHome={true}>
+            <Layout isHome={true} location={location}>
                 <div className="container">
                     <section className="post-feed">
                         {posts.map(({ node }) => (

@@ -7,7 +7,7 @@ import { Layout } from "../components/common";
 
 export default function Landing(props) {
     return (
-        <Layout path={props.path} layoutClass="index-content">
+        <Layout layoutClass="index-content">
             <div className="content">
                 <div className="intro ">
                     <h1>Ciao, I am Francesco.</h1>
