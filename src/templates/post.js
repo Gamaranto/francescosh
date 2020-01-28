@@ -12,7 +12,7 @@ import { MetaData } from "../components/common/meta";
  * This file renders a single post and loads all the content.
  *
  */
-const Post = ({ data, location }) => {
+const Post = ({ data, location, path }) => {
     const post = data.ghostPost;
 
     return (

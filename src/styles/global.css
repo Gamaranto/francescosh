@@ -1,14 +1,19 @@
 :root {
     --main-color: hsl(340.5, 59.7%, 50.4%);
-    --accent-color: hsl(270, 50%, 40%);
+    --secondary-color: hsl(270, 50%, 40%);
     --background-color: hsl(216, 45.5%, 95.7%);
     --text-color: hsl(216, 38.5%, 5.1%);
+    --secondary-text-color: hsla(216, 76.9%, 5.1%, 0.74);
     --desaturated-text-color: hsl(340.5, 59.7%, 30.4%);
     --font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI",
         Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
         sans-serif;
     --font-family-serif: "Lora", serif;
     --font-family-monospace: "Menlo", monospace;
+}
+
+html {
+    font-size: 62.5%;
 }
 
 * {
@@ -19,6 +24,7 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
+    font-size: 1.6rem;
 }
 
 h1,
@@ -32,7 +38,11 @@ h3 {
 h1 {
     font-size: min(max(2.5rem, 7vw), 12.5rem);
     line-height: 1.4;
-    margin: 15px auto;
+    margin: 1.5rem auto;
+}
+
+h2 {
+    font-size: 2.4rem;
 }
 
 a {
@@ -42,12 +52,13 @@ a {
 }
 
 main {
-    width: calc(100vw - 80px);
+    width: calc(100vw - 8rem);
     margin: 0 auto;
+    padding: 4vw 0;
 }
 section {
     width: 100%;
-    margin-top: 100px;
+    margin-top: 10rem;
 }
 
 /* Header styles */
@@ -90,15 +101,15 @@ section {
 }
 
 .route-link {
-    padding: 8px 0;
     display: inline-block;
+    padding: 0.8rem 0;
 }
 
 .route-link:not(.last-route-link)::after {
     content: "•";
-    margin: auto 8px;
+    margin: auto 0.8rem;
     font-size: 1.2em;
-    background: linear-gradient(var(--main-color), var(--accent-color));
+    background: linear-gradient(var(--main-color), var(--secondary-color));
     background-clip: text;
     color: transparent;
 }
@@ -141,11 +152,11 @@ section {
 footer {
     display: flex;
 
-    margin: 100px auto 0 auto;
+    margin: 100rem auto 0 auto;
     width: 80%;
-    font-size: 13.5px;
+    font-size: 1.35rem;
     justify-content: space-between;
-    border-top: 1px grey solid;
+    border-top: 1px var(--secondary-text-color) solid;
     grid-area: footer;
 }
 
@@ -175,7 +186,7 @@ main {
 
 .grid {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 1rem;
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-areas:
         "header     header   header"
