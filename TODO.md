@@ -16,7 +16,7 @@
 
 ## Blog Page:
 
-    ### TODO: Restyle accordingly to all website.
+    ### TODO: Resize pics in the header.
     ### TODO: Write a first entry post.
 
 ## All pages:

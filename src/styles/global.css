@@ -12,10 +12,6 @@
     --font-family-monospace: "Menlo", monospace;
 }
 
-html {
-    font-size: 62.5%;
-}
-
 * {
     box-sizing: border-box;
 }
@@ -24,7 +20,6 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: var(--font-family);
-    font-size: 1.6rem;
 }
 
 h1,
@@ -34,9 +29,9 @@ h3 {
     font-weight: bold;
     margin: 0;
 }
-
+/* y = y_1 + m(x - x1) ==> y_1 + (y_2 - y_1) / (x_2 - x_1) * (100vw - x_1) */
 h1 {
-    font-size: min(max(2.5rem, 7vw), 12.5rem);
+    font-size: calc(2.5rem + 3.75 * ((100vw - 320px) / 680));
     line-height: 1.4;
     margin: 1.5rem auto;
 }
