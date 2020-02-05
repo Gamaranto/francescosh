@@ -1,6 +1,6 @@
 import React from "react";
 
-import Zombie from "../../public/images/icons/Zombie.inline.svg";
+import Zombie from "../../public/images/icons/zombie.inline.svg";
 
 import "../styles/index.css";
 import { Layout } from "../components/common";
