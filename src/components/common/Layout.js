@@ -37,13 +37,12 @@ const DefaultLayout = ({
         ? `https://www.facebook.com/${site.facebook.replace(/^\//, "")}`
         : null;
 
-    console.log(slug);
-
     return (
         <>
             <Helmet>
                 <html lang={site.lang} />
                 <style type="text/css">{`${site.codeinjection_styles}`}</style>
+                <title>Francesco Baccetti</title>
                 <body className={bodyClass} />
             </Helmet>
 
