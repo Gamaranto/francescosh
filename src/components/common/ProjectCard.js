@@ -3,7 +3,7 @@ import React from "react";
 export default function ProjectCard({ title, order, imgsrc }) {
     return isOdd(order) ? (
         <>
-            <article className="project-card">
+            <article className="project-card project-odd">
                 <h3>{title}</h3>
                 <img src={imgsrc} alt={`${title} logo`} />
                 <p>This is such an amazing project. {imgsrc}</p>
@@ -13,7 +13,7 @@ export default function ProjectCard({ title, order, imgsrc }) {
     ) : (
         <>
             <div className="ws"></div>
-            <article className="project-card">
+            <article className="project-card project-even">
                 <h3>{title}</h3>
                 <img src={imgsrc} alt={`${title} logo`} />
                 <p>This is such an amazing project.</p>

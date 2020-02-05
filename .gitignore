@@ -72,5 +72,5 @@ typings/
 .cache/
 public
 yarn-error.log
-.netlify/
 .ghost.json
+TODO.md

@@ -2,11 +2,9 @@
 
 ## Footer
 
-    ### DONE: Make the links to Twitter and bla bla bla.
-
 ## Body
 
-    ### DONE: fix SVG
+    ### TODO: Add fluid typography.
     ### TODO: Animate the SVG
 
 ## Projects Page:
@@ -19,6 +17,7 @@
     ### TODO: Resize pics in the header.
     ### TODO: Write a first entry post.
 
-## All pages:
+## General stuff:
 
-###TODO: Add an home Component
+    ### TODO: Add caching with Now directives.
+    ### TODO: Add font swap in global.css
