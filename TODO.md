@@ -1,20 +1,19 @@
 # Todos list to finish this website.
 
-## Footer
+## Global
 
-## Body
+    ### TODO: Add fluid typography
 
-    ### TODO: Add fluid typography.
+## Index
+
     ### TODO: Animate the SVG
+    ### TODO: Add Media Queries
 
-## Projects Page:
+## Projects
 
-    ### TODO: Fetch the projects from github
-    ### TODO: Connect them with an SVG.
+    ### TODO: Connect the project boxes with an SVG.
 
-## Blog Page:
+## Blog
 
     ### TODO: Resize pics in the header.
     ### TODO: Write a first entry post.
-
-## General stuff:
