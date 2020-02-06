@@ -4,7 +4,7 @@ import { Link } from "gatsby";
 export default function HeaderLinks() {
     return (
         <nav className="nav-menu">
-            <Link to="/about">About</Link>
+            <Link to="/projects">Projects</Link>
 
             <a href="https://podcast.italiansmakeitbetter.com">Podcast</a>
 

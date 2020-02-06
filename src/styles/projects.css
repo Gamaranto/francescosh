@@ -16,10 +16,10 @@
 .project-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    justify-content: space-around;
     text-align: center;
     position: relative;
-    padding: 1.5rem;
+    padding: 1.5rem 1.5rem 1rem;
     height: 12.5rem;
     max-width: 15rem;
     background-color: var(--background-color);
@@ -59,4 +59,47 @@
 
 .project-card h3 {
     font-family: var(--font-family-monospace);
+    letter-spacing: 0.05em;
+}
+
+.project-card-footer {
+    align-self: flex-end;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.gh-icon {
+    position: relative;
+    max-width: 32px;
+    max-height: 32px;
+    fill: var(--text-color);
+}
+
+.gh-icon:hover {
+    fill: url(#icon-shape-gradient);
+}
+
+.gh-icon:hover::before {
+    content: "See on Github";
+    position: absolute;
+    top: 40px;
+    left: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    background-color: hsl(270, 70%, 90%);
+    border: 1px solid hsl(270, 50%, 40%);
+    color: hsl(270, 50%, 40%);
+    opacity: 0.9;
+    white-space: nowrap;
+}
+
+/* Icons gradient */
+
+.main-stop {
+    stop-color: var(--main-color);
+}
+
+.alt-stop {
+    stop-color: var(--secondary-color);
 }

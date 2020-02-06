@@ -2,7 +2,8 @@
   "build": {
     "env": {
       "GHOST_API_URL": "@ghostapiurl",
-      "GHOST_CONTENT_API_KEY": "@content-api-key"
+      "GHOST_CONTENT_API_KEY": "@content-api-key",
+      "GITHUB_TOKEN": "@github-token"
     }
   }
 }

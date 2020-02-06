@@ -1,27 +1,22 @@
 import React from "react";
 
-export default function ProjectCard({ title, order, imgsrc }) {
-    return isOdd(order) ? (
-        <>
-            <article className="project-card project-odd">
-                <h3>{title}</h3>
-                <img src={imgsrc} alt={`${title} logo`} />
-                <p>This is such an amazing project. {imgsrc}</p>
-            </article>
-            <div className="ws"></div>
-        </>
-    ) : (
-        <>
-            <div className="ws"></div>
-            <article className="project-card project-even">
-                <h3>{title}</h3>
-                <img src={imgsrc} alt={`${title} logo`} />
-                <p>This is such an amazing project.</p>
-            </article>
-        </>
-    );
-}
+import GitHubIcon from "../../../static/images/icons/github.inline.svg";
+import { isOdd } from "../../utils/fns";
 
-function isOdd(n) {
-    return n % 2 === 1;
+export default function ProjectCard({ title, order, url, description }) {
+    return (
+        <article
+            className={`project-card ${
+                isOdd(order) ? "project-odd" : "project-even"
+            }`}
+        >
+            <h3>{title}</h3>
+            <p>{description}</p>
+            <div className="project-card-footer">
+                <a href={url} className="gh-icon">
+                    <GitHubIcon />
+                </a>
+            </div>
+        </article>
+    );
 }

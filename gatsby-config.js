@@ -1,4 +1,5 @@
 const path = require("path");
+require("dotenv").config();
 
 const config = require("./src/utils/siteConfig");
 const generateRSSFeed = require("./src/utils/rss/generate-feed");
@@ -36,7 +37,8 @@ try {
  */
 module.exports = {
     siteMetadata: {
-        siteUrl: config.siteUrl
+        siteUrl: config.siteUrl,
+        siteTitleMeta: config.siteTitleMeta
     },
     plugins: [
         /**
@@ -199,6 +201,35 @@ module.exports = {
             options: {
                 rule: {
                     include: /\.inline\.svg$/
+                }
+            }
+        },
+        {
+            resolve: "gatsby-source-github-api",
+            options: {
+                token: process.env.GITHUB_TOKEN,
+                graphQLQuery: `query ($author: String!, $userFirst: Int = 0) {
+                    user(login: $author) {
+                      repositories(first: $userFirst, orderBy: {field: CREATED_AT, direction: DESC}, privacy:PUBLIC) {
+                          nodes {
+                            name
+                            description
+                            url
+                            stargazers {
+                              totalCount
+                            }
+                            readme: object(expression:"master:README.md"){
+                              ... on Blob{
+                                text
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }`,
+                variables: {
+                    userFirst: 12,
+                    author: "Gamaranto"
                 }
             }
         }

@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "gatsby";
 
 export default function Route({ location = null, slug = null }) {
-    console.log(slug);
     if (location == null) {
         return null;
     }

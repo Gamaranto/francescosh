@@ -18,6 +18,3 @@
     ### TODO: Write a first entry post.
 
 ## General stuff:
-
-    ### TODO: Add caching with Now directives.
-    ### TODO: Add font swap in global.css
