@@ -6,6 +6,14 @@
 
 .hero {
     grid-area: hero;
+    max-width: 28.625rem;
+}
+
+@media (min-width: 48rem) {
+    .hero {
+        min-width: 29.625rem;
+        max-width: 51.5rem;
+    }
 }
 
 /* Main text styles */
@@ -16,6 +24,7 @@
 }
 
 .intro > h1 {
+    font-size: 6.875rem;
     letter-spacing: 0.12em;
     margin: 10px auto 0 auto;
 }
@@ -50,7 +59,7 @@
     grid-template-areas:
         "hero"
         "content";
-    margin: 0 auto;
+    margin: 5rem auto;
 }
 
 @media (min-width: 48rem) {
