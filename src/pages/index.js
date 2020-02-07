@@ -4,6 +4,7 @@ import Zombie from "../../public/images/icons/zombie.inline.svg";
 
 import "../styles/index.css";
 import { Layout } from "../components/common";
+import { Link } from "gatsby";
 
 export default function Landing(props) {
     return (
@@ -13,7 +14,22 @@ export default function Landing(props) {
                     <h1>Ciao, I am Francesco.</h1>
                     <p>
                         Nice to meet you. <br /> This is your personal window on
-                        my thoughts, projects and life.
+                        my{" "}
+                        <Link to="/blog" className="intro-links">
+                            thoughts
+                        </Link>
+                        ,{" "}
+                        <Link to="/projects" className="intro-links">
+                            projects
+                        </Link>{" "}
+                        and{" "}
+                        <a
+                            href="https://twitter.com/Gamarantor"
+                            className="intro-links"
+                        >
+                            life
+                        </a>
+                        .
                     </p>
                 </div>
             </div>

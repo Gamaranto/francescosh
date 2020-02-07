@@ -3,6 +3,7 @@
 ## Global
 
     ### TODO: Add fluid typography
+    ### TODO: Add Media Queries
 
 ## Index
 

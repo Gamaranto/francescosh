@@ -9,24 +9,25 @@
 .post-feed {
     display: grid;
     justify-content: space-between;
-    grid-gap: 30px;
-    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 30px;
+    column-gap: 30px;
+    grid-template-columns: 1fr;
 }
 
-@media (max-width: 98rem) {
+@media (min-width: 48rem) {
     .post-feed {
         grid-template-columns: 1fr 1fr;
     }
 }
-@media (max-width: 68rem) {
+@media (min-width: 75rem) {
     .post-feed {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 .content {
     margin: 0 auto;
-    font-size: 2rem;
+    font-size: 1.25rem;
     line-height: 1.7em;
 }
 
