@@ -1,9 +1,10 @@
 .projects {
     margin-top: 5rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 12vw;
+    grid-template-columns: 1fr 1fr 1fr;
     column-gap: 7.5vw;
+    row-gap: 12vh;
+    justify-items: center;
 }
 
 /* .project-card:nth-of-type(2n) {
@@ -26,14 +27,6 @@
     border-radius: 5px;
     box-shadow: 0 2px 2px var(--secondary-color);
     transition: all 0.25s ease 0s;
-}
-
-.project-even {
-    justify-self: flex-start;
-}
-
-.project-odd {
-    justify-self: flex-end;
 }
 
 .project-card:hover {

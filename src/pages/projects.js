@@ -11,31 +11,15 @@ export default function Projects({ data, location }) {
     return (
         <Layout location={location}>
             <section className="projects">
-                {repos.map((repo, key) => {
-                    return isOdd(key) ? (
-                        <>
-                            <ProjectCard
-                                title={repo.name}
-                                url={repo.url}
-                                description={repo.description}
-                                order={key}
-                                key={key}
-                            />
-                            <div className="ws"></div>
-                        </>
-                    ) : (
-                        <>
-                            <div className="ws"></div>
-                            <ProjectCard
-                                title={repo.name}
-                                url={repo.url}
-                                description={repo.description}
-                                order={key}
-                                key={key}
-                            />
-                        </>
-                    );
-                })}
+                {repos.map((repo, key) => (
+                    <ProjectCard
+                        title={repo.name}
+                        url={repo.url}
+                        description={repo.description}
+                        order={key}
+                        key={key}
+                    />
+                ))}
             </section>
         </Layout>
     );
