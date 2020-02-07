@@ -12,6 +12,7 @@
         sans-serif;
     --font-fallback: Helvetica, Arial, sans-serif;
     --font-serif-fallback: Georgia, "Times New Roman", Times, serif;
+    --font-monospace-fallback: monospace;
     --font-family-serif: "Lora", serif;
     --font-family-monospace: "Menlo", monospace;
 }
@@ -81,13 +82,26 @@ section {
 }
 
 /* Header styles */
-
 .header-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
-        "... ... links"
-        "... route ...";
+        "links"
+        "route";
+}
+
+@media (min-width: 75rem) {
+    .header-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-areas:
+            "... ... links"
+            "... route ...";
+    }
+
+    .nav-menu {
+        justify-self: flex-end;
+    }
 }
 
 .route {
@@ -145,11 +159,9 @@ section {
 
 .nav-menu {
     grid-area: links;
-    display: flex;
-    align-items: flex-end;
     padding: 0;
     margin: 15px 7px 0 0;
-    justify-self: flex-end;
+    justify-self: center;
 }
 
 .nav-menu > a {
@@ -207,7 +219,7 @@ main {
 .grid {
     display: grid;
     grid-gap: 1rem;
-    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-areas:
         "header"
         "main"

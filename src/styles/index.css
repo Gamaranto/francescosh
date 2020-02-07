@@ -50,6 +50,7 @@
     grid-template-areas:
         "hero"
         "content";
+    margin: 0 auto;
 }
 
 @media (min-width: 48rem) {
