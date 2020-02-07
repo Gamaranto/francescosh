@@ -24,14 +24,22 @@
 }
 
 .intro > h1 {
-    font-size: 6.875rem;
+    --max-fontsize: 4.875;
+    --min-fontsize: 3;
+    --fontsize-diff: calc(var(--max-fontsize) - var(--min-fontsize));
+    --screensize-diff: calc(var(--max-screensize) - var(--min-screensize));
+    --m: calc(100 * var(--fontsize-diff) / var(--screensize-diff));
+    font-size: calc(
+        (var(--min-fontsize) * 1rem) +
+            (var(--m) * (1vw - (var(--min-screensize) * 1rem / 100)))
+    );
     letter-spacing: 0.12em;
     margin: 10px auto 0 auto;
 }
 
 .intro > p {
-    font-size: 1.5rem;
     line-height: 1.2;
+    font-size: 1.25rem;
 }
 
 .intro-links {

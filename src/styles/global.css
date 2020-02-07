@@ -15,6 +15,18 @@
     --font-monospace-fallback: monospace;
     --font-family-serif: "Lora", serif;
     --font-family-monospace: "Menlo", monospace;
+    /* Everything in rems here. */
+    --max-fontsize: 1.275;
+    --min-fontsize: 1;
+    --max-screensize: 75;
+    --min-screensize: 18.75;
+    --fontsize-diff: calc(var(--max-fontsize) - var(--min-fontsize));
+    --screensize-diff: calc(var(--max-screensize) - var(--min-screensize));
+    --m: calc(100 * var(--fontsize-diff) / var(--screensize-diff));
+    font-size: calc(
+        (var(--min-fontsize) * 1rem) +
+            (var(--m) * (1vw - (var(--min-screensize) * 1rem / 100)))
+    );
 }
 
 html {
