@@ -1,5 +1,9 @@
 /* Layout */
 
+p {
+    max-width: 80ch;
+}
+
 .container {
     max-width: 1120px;
     margin: 0 auto;
@@ -27,7 +31,7 @@
 
 .content {
     margin: 0 auto;
-    font-size: 1.25rem;
+    font-size: 0.785rem;
     line-height: 1.7em;
 }
 
@@ -38,9 +42,14 @@
 }
 
 .post-full-content {
-    max-width: 72rem;
+    max-width: 45rem;
     margin: 0 auto;
     background: var(--background-color);
+}
+
+.post-full-content a {
+    background-color: var(--main-color);
+    color: var(--background-color);
 }
 
 .post-feature-image img {
@@ -61,59 +70,59 @@
 
 .content-body h1 {
     margin: 1em 0 0.5em 0;
-    font-size: 3.4rem;
+    font-size: 2.125rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .content-body h1 {
-        font-size: 2.8rem;
+        font-size: 1.75rem;
     }
 }
 
 .content-title {
     margin: 0 0 0.8em;
-    font-size: 5rem;
+    font-size: 3.125rem;
 }
 @media (max-width: 500px) {
     .content-title {
         margin: 0.8em 0;
-        font-size: 3.4rem;
+        font-size: 2.125rem;
     }
     .content {
-        font-size: 1.8rem;
+        font-size: 1.125rem;
     }
 }
 
 .content-body h2 {
     margin: 0.8em 0 0.4em 0;
-    font-size: 3.2rem;
+    font-size: 2rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .content-body h2 {
-        font-size: 2.6rem;
+        font-size: 1.625rem;
     }
 }
 
 .content-body h3 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.8rem;
+    font-size: 1.75rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .content-body h3 {
-        font-size: 2.2rem;
+        font-size: 1.375rem;
     }
 }
 
 .content-body h4 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2.4rem;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 @media (max-width: 500px) {
     .content-body h4 {
-        font-size: 2.2rem;
+        font-size: 1.375rem;
     }
 }
 
@@ -122,29 +131,29 @@
     margin: 0.5em 0;
     padding: 1em 0 1.5em;
     border: 0;
-    font-family: Georgia, serif;
+    font-family: var(--font-family-serif);
     color: var(--main-color);
     font-style: italic;
-    font-size: 3.2rem;
+    font-size: 2rem;
     line-height: 1.35em;
     text-align: center;
 }
 
 .content-body h6 {
     margin: 0.5em 0 0.2em 0;
-    font-size: 2rem;
+    font-size: 1.25rem;
     font-weight: 700;
 }
 
 .content-body figure {
     margin: 0.4em 0 1.6em;
-    font-size: 2.8rem;
+    font-size: 1.75rem;
     font-weight: 700;
 }
 
 .content-body pre {
     margin: 0.4em 0 1.8em;
-    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 1.4em;
     white-space: pre-wrap;
     padding: 20px;
@@ -185,7 +194,7 @@
 
 .post-card-tags {
     margin: 0 0 5px;
-    font-size: 1.4rem;
+    font-size: 0.875rem;
     line-height: 1.15;
     color: var(secondary-text-color);
 }
@@ -219,7 +228,7 @@
 
 .post-card-excerpt {
     margin: 0;
-    font-size: 1.6rem;
+    font-size: 1rem;
     line-height: 1.55;
 }
 
@@ -230,13 +239,13 @@
 }
 
 .author-header h1 {
-    margin: 0 0 1rem 0;
+    margin: 0 0 0.625rem 0;
 }
 
 .author-header p {
     margin: 0;
     color: var(--secondary-text-color);
-    font-size: 2.2rem;
+    font-size: 1.375rem;
     line-height: 1.3em;
 }
 
@@ -251,7 +260,7 @@
 
 .author-header-meta {
     display: flex;
-    margin: 1rem 0 0 0;
+    margin: 0.675rem 0 0 0;
 }
 
 .author-header-item {
@@ -269,7 +278,7 @@
         padding-bottom: 4vw;
     }
     .author-header p {
-        font-size: 1.7rem;
+        font-size: 1.06rem;
     }
     .author-header-image {
         height: 80px;
@@ -291,8 +300,8 @@
     border: var(--secondary-text-color) 1px solid;
     color: var(--secondary-text-secondary);
     text-decoration: none;
-    font-size: 1.4rem;
-    line-height: 1em;
+    font-size: 0.875rem;
+    line-height: 1.6em;
     border-radius: 5px;
 }
 
@@ -303,5 +312,5 @@
     margin-left: -50px;
     text-align: center;
     color: var(--secondary-text-color);
-    font-size: 1.3rem;
+    font-size: 0.8125rem;
 }

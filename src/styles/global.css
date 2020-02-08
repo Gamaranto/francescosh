@@ -56,7 +56,6 @@ body {
 .wf-active h3 {
     font-family: var(--font-family-serif);
     font-weight: bold;
-    margin: 0;
 }
 
 h1,
@@ -66,6 +65,7 @@ h3 {
     font-weight: bold;
     letter-spacing: -1.75px;
     word-spacing: 0.65px;
+    margin: 0;
 }
 /* y = y_1 + m(x - x1) ==> y_1 + (y_2 - y_1) / (x_2 - x_1) * (100vw - x_1) */
 h1 {
@@ -124,7 +124,7 @@ section {
 .route {
     margin: 0 auto;
     text-align: center;
-    font-size: 1rem;
+    font-size: 0.85rem;
     grid-area: route;
 }
 
@@ -136,14 +136,15 @@ section {
 .route-links {
     text-transform: capitalize;
     text-align: center;
+    text-transform: capitalize;
 }
 
-.route-links:first-child {
+.route-link:first-child {
     text-transform: none;
 }
 
 .route-header {
-    font-size: 3.625rem;
+    font-size: 2.75rem;
     font-weight: bold;
     text-shadow: 1px 0 0 var(--text-color),
         -4px -5px 0 hsla(216, 38.5%, 5.1%, 0.05);
