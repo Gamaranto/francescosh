@@ -137,6 +137,7 @@ section {
     text-transform: capitalize;
     text-align: center;
     text-transform: capitalize;
+    white-space: nowrap;
 }
 
 .route-link:first-child {
