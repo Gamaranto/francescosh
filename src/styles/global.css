@@ -48,6 +48,7 @@ html {
 body {
     background-color: var(--background-color);
     color: var(--text-color);
+    overflow-x: hidden;
 }
 
 .wf-active h1,
@@ -68,7 +69,13 @@ h3 {
 }
 /* y = y_1 + m(x - x1) ==> y_1 + (y_2 - y_1) / (x_2 - x_1) * (100vw - x_1) */
 h1 {
-    font-size: calc(2.5rem + 3.75 * ((100vw - 320px) / 680));
+    --max-fontsize: 3rem;
+    --min-fontsize: 2rem;
+    --m: calc(100 * var(--fontsize-diff) / var(--screensize-diff));
+    font-size: calc(
+        (var(--min-fontsize) * 1rem) +
+            (var(--m) * (1vw - (var(--min-screensize) * 1rem / 100)))
+    );
     line-height: 1.4;
     margin: 1.5rem auto;
 }
@@ -84,13 +91,11 @@ a {
 }
 
 main {
-    width: calc(100vw - 8rem);
     margin: 0 auto;
-    padding: 4vw 0;
+    padding: 4vw;
 }
 section {
     width: 100%;
-    margin-top: 10rem;
 }
 
 /* Header styles */

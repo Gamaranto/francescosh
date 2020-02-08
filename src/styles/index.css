@@ -11,7 +11,6 @@
 
 @media (min-width: 48rem) {
     .hero {
-        min-width: 29.625rem;
         max-width: 51.5rem;
     }
 }
@@ -27,7 +26,6 @@
     --max-fontsize: 4.875;
     --min-fontsize: 3;
     --fontsize-diff: calc(var(--max-fontsize) - var(--min-fontsize));
-    --screensize-diff: calc(var(--max-screensize) - var(--min-screensize));
     --m: calc(100 * var(--fontsize-diff) / var(--screensize-diff));
     font-size: calc(
         (var(--min-fontsize) * 1rem) +
