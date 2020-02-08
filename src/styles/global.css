@@ -182,7 +182,7 @@ section {
 }
 
 .nav-menu > a {
-    font-size: max(1rem, 13.5px);
+    font-size: 0.9rem;
     margin: 0 15px;
     font-weight: lighter;
     opacity: 0.9;
@@ -201,7 +201,7 @@ section {
 footer {
     display: flex;
 
-    margin: 10rem auto 0 auto;
+    margin: 3rem auto 0 auto;
     width: 80%;
     font-size: 0.875rem;
     justify-content: space-between;

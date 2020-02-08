@@ -6,12 +6,18 @@
 
 .hero {
     grid-area: hero;
-    max-width: 28.625rem;
+}
+
+.zombie {
+    display: block;
+    margin: 0 auto;
+    max-width: 20.35rem;
 }
 
 @media (min-width: 48rem) {
-    .hero {
+    .zombie {
         max-width: 51.5rem;
+        min-width: 20.35rem;
     }
 }
 
@@ -31,7 +37,8 @@
         (var(--min-fontsize) * 1rem) +
             (var(--m) * (1vw - (var(--min-screensize) * 1rem / 100)))
     );
-    letter-spacing: 0.12em;
+    letter-spacing: 0.09em;
+    line-height: 1;
     margin: 10px auto 0 auto;
 }
 
@@ -65,7 +72,7 @@
     grid-template-areas:
         "hero"
         "content";
-    margin: 5rem auto;
+    margin: 0 auto;
 }
 
 @media (min-width: 48rem) {

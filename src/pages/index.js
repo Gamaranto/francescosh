@@ -34,7 +34,7 @@ export default function Landing(props) {
                 </div>
             </div>
             <div className=" hero">
-                <Zombie />
+                <Zombie className="zombie" />
             </div>
         </Layout>
     );
