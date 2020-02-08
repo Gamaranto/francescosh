@@ -36,6 +36,12 @@ export default function Landing(props) {
             <div className=" hero">
                 <Zombie className="zombie" />
             </div>
+            <div className="cta">
+                <div className="triangle bottom-triangle"></div>
+                <a className="email-button" href="mailto:gamarantor@gmail.com">
+                    <h1> Fill My Inbox</h1>
+                </a>
+            </div>
         </Layout>
     );
 }

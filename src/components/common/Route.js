@@ -16,9 +16,7 @@ export default function Route({ location = null, slug = null }) {
                         {path}
                     </Link>
                 ))}
-                <span className="route-link last-route-link">
-                    {slug ? clean(slug) : clean(location.pathname)}
-                </span>
+                <span className="route-link last-route-link">{lastPath}</span>
             </div>
             <Link to="/">
                 <h2 className="route-header">Francesco</h2>

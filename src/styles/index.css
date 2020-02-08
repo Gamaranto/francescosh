@@ -1,11 +1,51 @@
 /* Layout styling */
 
+.index-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "hero"
+        "content"
+        "cta";
+    margin: 0 auto;
+}
+
+@media (min-width: 48rem) {
+    .index-content {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "content hero"
+            "... cta";
+    }
+}
+
+@media (min-width: 75rem) {
+    .index-content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "content hero"
+            "... cta";
+    }
+    .cta {
+        text-align: start;
+    }
+}
+
 .content {
     grid-area: content;
 }
 
 .hero {
     grid-area: hero;
+}
+
+.cta {
+    grid-area: cta;
+    text-align: center;
+    padding-top: 5rem;
+    position: relative;
 }
 
 .zombie {
@@ -37,9 +77,10 @@
         (var(--min-fontsize) * 1rem) +
             (var(--m) * (1vw - (var(--min-screensize) * 1rem / 100)))
     );
-    letter-spacing: 0.09em;
+    letter-spacing: 0em;
     line-height: 1;
     margin: 10px auto 0 auto;
+    text-shadow: 2px 0 0 var(--secondary-text-color);
 }
 
 .intro > p {
@@ -63,30 +104,40 @@
 }
 
 .intro-links:nth-of-type(3) {
-    background-color: hsl(216, 90%, 65.7%);
+    background-color: var(--third-color);
 }
 
-.index-content {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "hero"
-        "content";
-    margin: 0 auto;
+.email-button > h1 {
+    position: relative;
+    --max-fontsize: 3.875;
+    --min-fontsize: 2;
+    --fontsize-diff: calc(var(--max-fontsize) - var(--min-fontsize));
+    --m: calc(100 * var(--fontsize-diff) / var(--screensize-diff));
+    font-size: calc(
+        (var(--min-fontsize) * 1rem) +
+            (var(--m) * (1vw - (var(--min-screensize) * 1rem / 100)))
+    );
+    letter-spacing: 0em;
+    line-height: 1;
+    margin: 10px auto 0 auto;
+    text-transform: capitalize;
+    text-shadow: 2px 0 var(--background-color);
 }
 
-@media (min-width: 48rem) {
-    .index-content {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-areas: "content hero";
-    }
+.email-button > h1:hover {
+    top: -4px;
+    color: var(--text-color);
+    background-image: linear-gradient(
+        var(--main-color),
+        var(--secondary-color)
+    );
+    background-clip: text;
+    text-shadow: 2px 0 var(--secondary-color);
 }
 
-@media (min-width: 75rem) {
-    .index-content {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-        grid-template-areas: "content hero";
-    }
+.bottom-triangle {
+    background-color: var(--third-color);
+    clip-path: polygon(100% 0, 0 90%, 100% 90%);
+    bottom: 0;
+    right: -10vw;
 }
