@@ -11,7 +11,7 @@ import { MetaData } from "../components/common/meta";
  * Loads all posts for the requested author incl. pagination.
  *
  */
-const Author = ({ data, location, pageContext, path }) => {
+const Author = ({ data, location, pageContext }) => {
     const author = data.ghostAuthor;
     const posts = data.allGhostPost.edges;
     const twitterUrl = author.twitter

@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 
+import { pathFromLocation } from "../../utils/fns";
+
 export default function Route({ location = null, slug = null }) {
     if (location == null) {
         return null;
@@ -27,10 +29,4 @@ export default function Route({ location = null, slug = null }) {
 
 function clean(s) {
     return s.replace(/\//g, "").replace(/-/g, " ");
-}
-
-function pathFromLocation(location) {
-    let paths = location.href.match(/\b(?!\bhttps?\b)([^/])+\b/g);
-    let lastPath = paths.splice(-1);
-    return { paths, lastPath };
 }
