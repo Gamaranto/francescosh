@@ -138,6 +138,10 @@ section {
     text-align: center;
 }
 
+.route-links:first-child {
+    text-transform: none;
+}
+
 .route-header {
     font-size: 3.625rem;
     font-weight: bold;
