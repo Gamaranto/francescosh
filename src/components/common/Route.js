@@ -1,32 +1,34 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import { pathFromLocation } from "../../utils/fns";
+import { pathFromLocation, clean, capitalize } from "../../utils/fns";
 
 export default function Route({ location = null, slug = null }) {
     if (location == null) {
         return null;
     }
 
-    let { paths, lastPath } = pathFromLocation(location);
+    let { hostname, paths, lastPath } = pathFromLocation(location);
+    console.log({ paths, lastPath, location, hostname });
 
     return (
         <div className="route">
             <div className="route-links">
+                <Link to="/" className="route-link">
+                    {capitalize(hostname)}
+                </Link>
                 {paths.map((path, key) => (
-                    <Link key={key} to="/" className="route-link">
+                    <Link key={key} to={`/${path}`} className="route-link">
                         {path}
                     </Link>
                 ))}
-                <span className="route-link last-route-link">{lastPath}</span>
+                <span className="route-link last-route-link">
+                    {clean(lastPath)}
+                </span>
             </div>
             <Link to="/">
                 <h2 className="route-header">Francesco</h2>
             </Link>
         </div>
     );
-}
-
-function clean(s) {
-    return s.replace(/\//g, "").replace(/-/g, " ");
 }
