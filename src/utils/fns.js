@@ -10,7 +10,9 @@ export function pathFromLocation(location) {
 }
 
 export function capitalize(s) {
-    return s.slice(0, 1).toUpperCase() + s.slice(1);
+    return Boolean(s)
+        ? s.slice(0, 1).toUpperCase() + s.slice(1)
+        : "Francesco.sh";
 }
 
 export function clean(s) {
