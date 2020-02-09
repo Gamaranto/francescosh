@@ -9,6 +9,7 @@
 ## Projects
 
     ### TODO: Connect the project boxes with an SVG.
+    ### TODO: Add a Page for each box.
 
 ## Blog
 
